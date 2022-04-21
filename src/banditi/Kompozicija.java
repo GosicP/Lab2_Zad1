@@ -6,8 +6,8 @@ import java.util.List;
 public class Kompozicija {
 	
 	
-	List<Vagon> vagoni_lista = new LinkedList<Vagon>();
-	Smer smer_vagona;
+	protected List<Vagon> vagoni_lista = new LinkedList<Vagon>();
+	private Smer smer_vagona;
 	
 	public Kompozicija() {}
 
