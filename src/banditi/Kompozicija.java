@@ -35,14 +35,19 @@ public class Kompozicija {
 	public Vagon dohvatiSusedniVagon(Vagon vagon, Smer smer) throws GNepostojeciVagon {
 		if(smer.compareTo(smer_vagona.ISPRED)!=0) {
 			int broj_vagona=vagoni_lista.indexOf(vagon);
-			return vagoni_lista.get(broj_vagona-1);
-		}else {
-			int broj_vagona=vagoni_lista.indexOf(vagon);
 			if(broj_vagona != vagoni_lista.size()-1) {
 			return vagoni_lista.get(broj_vagona+1);
 			}else {
 				throw new GNepostojeciVagon();
 			}
+		}else {
+			int broj_vagona=vagoni_lista.indexOf(vagon);
+			if(broj_vagona != 0) {
+			return vagoni_lista.get(broj_vagona-1);
+			}else {
+				throw new GNepostojeciVagon();
+			}
+			
 		}
 		
 	} 
